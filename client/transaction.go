@@ -6,8 +6,8 @@ import (
 	"encoding/hex"
 	"errors"
 	"github.com/ethereum/go-ethereum/crypto"
-	"tron-api/block"
-	"tron-api/common"
+	"github.com/notnear/tron-api/block"
+	"github.com/notnear/tron-api/common"
 )
 
 func (t *Client) GetTransactionById(hashId string) (result *block.Transaction, err error) {

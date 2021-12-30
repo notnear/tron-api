@@ -1,6 +1,6 @@
 package client
 
-import "tron-api/block"
+import "github.com/notnear/tron-api/block"
 
 func (t *Client) GetNowBlock() (result block.Block, err error) {
 	err = t.Post("/wallet/getnowblock", nil, &result)

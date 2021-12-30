@@ -2,10 +2,10 @@ package account
 
 import (
 	"fmt"
+	"github.com/notnear/tron-api/common"
 	"github.com/shopspring/decimal"
 	"math"
 	"math/big"
-	"tron-api/common"
 )
 
 func (a *Account) ToTrx() (trx float64) {

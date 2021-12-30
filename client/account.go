@@ -5,7 +5,7 @@ import (
 	"encoding/hex"
 	"github.com/btcsuite/btcd/btcec"
 	"github.com/ethereum/go-ethereum/crypto"
-	"tron-api/account"
+	"github.com/notnear/tron-api/account"
 )
 
 const (
