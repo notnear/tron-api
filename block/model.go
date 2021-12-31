@@ -34,6 +34,8 @@ type TransactionRawData struct {
 				Data            string `json:"data"`
 				OwnerAddress    string `json:"owner_address"`
 				ContractAddress string `json:"contract_address"`
+				Amount          int64  `json:"amount"`
+				ToAddress       string `json:"to_address"`
 			} `json:"value"`
 		} `json:"parameter"`
 	} `json:"contract"`
