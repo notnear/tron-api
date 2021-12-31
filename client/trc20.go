@@ -60,6 +60,9 @@ func (t *Client) ContractBalanceOf(owner, contract string) (*big.Int, error) {
 	if err != nil {
 		return nil, err
 	}
+	if len(result.ConstantResult) < 1 {
+		return nil, fmt.Errorf("contract result error")
+	}
 	r, err := account.ParseTRC20NumericProperty(result.ConstantResult[0])
 	if err != nil {
 		return nil, fmt.Errorf("contract address %s: %v", contract, err)
