@@ -21,6 +21,17 @@ func (t *Client) GetTransactionById(hashId string) (result *block.Transaction, e
 	return
 }
 
+func (t *Client) GetTransactionInfoById(hashId string) (result *block.TransactionInfo, err error) {
+	err = t.Post("/wallet/gettransactioninfobyid", struct {
+		Value string `json:"value"`
+	}{Value: hashId}, &result)
+
+	if err != nil {
+		return
+	}
+	return
+}
+
 func (t *Client) CreateTransaction(owner, to string, amount int64) (result *block.Transaction, err error) {
 	err = t.Post("/wallet/createtransaction", struct {
 		Owner   string `json:"owner_address"`

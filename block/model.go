@@ -45,3 +45,19 @@ type TransactionRawData struct {
 	FeeLimit      int64  `json:"fee_limit"`
 	Timestamp     int    `json:"timestamp"`
 }
+
+type TransactionInfo struct {
+	Id              string   `json:"id"`
+	BlockNumber     int64    `json:"blockNumber"`
+	BlockTimeStamp  int64    `json:"blockTimeStamp"`
+	ContractResult  []string `json:"contractResult"`
+	ContractAddress string   `json:"contract_address"`
+	Receipt         struct {
+		OriginEnergyUsage int64  `json:"origin_energy_usage"`
+		EnergyUsageTotal  int64  `json:"energy_usage_total"`
+		NetUsage          int64  `json:"net_usage"`
+		Result            string `json:"result"`
+	} `json:"receipt"`
+	Result     string `json:"result"`
+	ResMessage string `json:"resMessage"`
+}
