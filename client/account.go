@@ -56,7 +56,7 @@ func (t *Client) GetAccount(addr string) (result *account.Account, err error) {
 	return
 }
 
-func (t *Client) GetAccounts(addr string) (result *account.Account, err error) {
+func (t *Client) GetAccounts(addr string) (result *account.Accounts, err error) {
 	err = t.Get("/v1/accounts/"+addr, &result)
 
 	if err != nil {

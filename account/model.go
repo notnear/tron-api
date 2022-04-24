@@ -7,4 +7,13 @@ type Account struct {
 	Hex     Hex
 }
 
+type Accounts struct {
+	Data    []Account `json:"data"`
+	Success bool      `json:"success"`
+	Meta    struct {
+		At       int `json:"at"`
+		PageSize int `json:"page_size"`
+	}
+}
+
 type Hex []byte
