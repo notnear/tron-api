@@ -56,6 +56,15 @@ func (t *Client) GetAccount(addr string) (result *account.Account, err error) {
 	return
 }
 
+func (t *Client) GetAccounts(addr string) (result *account.Account, err error) {
+	err = t.Get("/v1/accounts/"+addr, &result)
+
+	if err != nil {
+		return
+	}
+	return
+}
+
 func (t *Client) ValidateAddress(addr string) (Is bool, err error) {
 	var result struct {
 		Result  bool   `json:"result"`
